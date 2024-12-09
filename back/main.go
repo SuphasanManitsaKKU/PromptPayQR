@@ -233,7 +233,7 @@ func verifySlip(db *gorm.DB, file io.Reader, filename, amount, timestamp string)
 	// ตรวจสอบค่าที่ได้จาก API
 	data, ok := result["data"].(map[string]interface{})
 	if !ok {
-		return nil, fmt.Errorf("ไม่พบข้อมูลใน response")
+		return nil, fmt.Errorf("การยืนยันการชำระเงินผ่านสลิปไม่สามารถใช้งานได้ในขณะนี้เนื่องจากโควตาของ API ของ EasySlip หมดลงแล้ว")
 	}
 
 	transRef := data["transRef"].(string)

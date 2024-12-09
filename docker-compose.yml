@@ -3,7 +3,6 @@ services:
     build:
       context: ./front
       dockerfile: Dockerfile
-    # image: mycontainerappwhat.azurecr.io/front-image:latest
     ports:
       - "3000:3000"
 
@@ -11,7 +10,6 @@ services:
     build:
       context: ./back
       dockerfile: Dockerfile
-    # image: mycontainerappwhat.azurecr.io/back-image:latest
     ports:
       - "8000:8000"
 
