@@ -180,7 +180,7 @@ func byteToBase64(imgByte []byte) string {
 func verifySlip(db *gorm.DB, file io.Reader, filename, amount, timestamp string) (map[string]interface{}, error) {
 	// เตรียม URL และ Authorization
 	url := "https://developer.easyslip.com/api/v1/verify"
-	authToken := "d823a3a2-7d6f-482b-84bd-8d7dfaa80c5b"
+	authToken := "d823a3a2-7d6f-482b-84bd-8d7dfaa80c5b" // หมดอายุแล้วงับฟุ้ววววววว
 
 	// สร้าง request สำหรับ multipart/form-data
 	body := &bytes.Buffer{}

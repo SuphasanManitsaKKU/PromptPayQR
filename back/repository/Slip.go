@@ -2,15 +2,12 @@ package repository
 
 import (
 	"PromptPayQR/model"
-	"fmt"
 	"log"
-
 	"gorm.io/gorm"
 )
 
 // Add a new slip with transaction reference and image
 func CreateSlip(db *gorm.DB, transRef string) model.Slip {
-	fmt.Println("CreateSlip------------------------------------")
 	slip := model.Slip{
 		TransRef: transRef,
 	}
@@ -23,7 +20,6 @@ func CreateSlip(db *gorm.DB, transRef string) model.Slip {
 
 // Get a slip by transRef
 func GetSlipByTransRef(db *gorm.DB, transRef string) (*model.Slip, error) {
-	fmt.Println("GetSlipByTransRef------------------------------------")
 	var slip model.Slip
 	result := db.Where("trans_ref = ?", transRef).First(&slip)
 
